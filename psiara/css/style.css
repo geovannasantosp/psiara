@@ -1,3 +1,16 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Quicksand:wght@300..700&display=swap');
+/* ESTILOS
+Quicksand:
+     font-family: "Quicksand", sans-serif;
+
+Gloria Hallelujah:
+     font-family: "Gloria Hallelujah", cursive;
+
+*/
+
+    
+  
 /* VARIAVEL CORES */
 :root {
 
@@ -131,6 +144,15 @@ a {
 
 /* Ajuste para o Corpo do Conteudo */
 
+#main{
+    margin-left: 300px;
+}
+ 
+#container{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 /* menu responsivo */
 @media (max-width: 1199px) {
     #header {
@@ -238,75 +260,271 @@ color: var(--texto-claro);
     letter-spacing: 2px;
     border-bottom: 3px solid #c8d9e6;
 }
-
-/* ESTRUTURA BASE - CORPO */
-#main{
-    margin-left: 300px;
+@media (min-width: 1024px){
+    #hero{
+        background-attachment: fixed;
+    }
 }
- 
-#container{
-    padding-left: 30px;
-    padding-right: 30px;
+@media (max-width: 1024px) {
+    #hero{
+        background-attachment: fixed;
+    }
+}
+@media(max-width: 768px){
+    #hero h2 {
+        font-size: 70px;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+    #hero p {
+        font-size: 28px;
+    }
 }
 
 
 
-#grafico-section {
-    margin-top: 50px;
-    padding: 20px;
-   
-    color: var(--cor-detalhes);
-    text-align: center;
-  }
-  
-  #grafico-container {
-    display: flex;
-    justify-content: center; /* Centraliza o gráfico horizontalmente */
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  
-  #grafico {
-    width: 70%; /* Garantir que o gráfico ocupe uma boa largura */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza as barras no container */
-    gap: 20px;
-  }
-  
-  .grafico-barra {
+
+section{
+    padding: 60px 0;
+    overflow: hidden;
+    background: var(--fundo-claro);
+    color: var(--texto-escuro);
+
+}
+.section-bg{
+    background: var(--fundo-escuro);
+    color: var(--texto-claro);
+}
+.section-title{
+    padding-bottom: 30px;
+}
+
+.section-title{
+    color: var(--texto-titulo-escuro);
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
     position: relative;
+}
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    background: var(--texto-hover);
+    width: 150px;
+    height: 3px;
+    display: block;
+    left: 0;
+    bottom: 8;
+    font-family: "Gloria Hallelujah", cursive;
+
+}
+
+.section-title p{
+    margin-bottom:0 ;
+    color: var(--texto-titulo-escuro);
+    font-family:"Quicksand", sans-serif;
+}
+
+/* SOBRE */
+.sobre .content h3{
+    color: var(--texto-hover);
+    font-weight: 700px;
+    font-size: 26px;
+    font-family: "Gloria Hallelujah", cursive;
+}
+.sobre .content ul{
+    list-style: none;
+    padding: 0;
+}
+.sobre .content ul li{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.sobre .content ul strong{
+margin-right: 5px;
+font-weight: 900;
+letter-spacing: .5px;
+}
+
+.sobre .content ul i{
+    color: var(--borda-clara);
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.conquistas{
+    padding-bottom: 30px;
+
+}
+.conquistas .count-box{
+    padding: 30px;
     width: 100%;
-    height: 30px;
-    background-color: #9fa09d;
-    border-radius: 15px;
-  }
-  
-  .barra {
-    width: 0%; /* Inicia com 0% de largura */
-    height: 100%;
-    background-color: var(--cor-detalhes);
-    border-radius: 15px;
+}
+
+.conquistas .count-box i{
+    color: var(--cor-detalhes);
+    font-size: 44px;
+    display: block;
+    float: left;
+/*     line-height: ;*/
+}
+
+.conquistas .count-box span{
+    font-size: 48px;
+    color: var(--fundo-menu-lateral);
+    display: block;
+    line-height: 40px;
+    font-weight: 700;
+    margin-left: 60px;
+}
+.conquistas .count-box p {
+    padding: 15px 0 0 0;
+    margin: 0 0 0 60px;
+    font-family: "Open", sans-serif;
+    color: var(--texto-escuro);
+}
+.conquistas .count-box strong{
+    font-weight: 800;
+}
+
+/* Opcional */
+.conquistas .count-box i:hover 
+.conquistas .count-box span:hover {
+    color: var(--fundo-claro);
+    transition: ease-in-out .5s;
+}
+
+.skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+}
+
+.skills .progress .skill {
+    padding: 0;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    display: block;
+    color: #c0c0c0;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.skills .progress .skill .val {
+    font-style: normal;
+    float: right;
+    color: #c0c0c0;
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.skills .progress-bar-bg {
+    background: #a6afb4;
+    height: 10px;
+}
+.skills .progress-bar{
+background: var(--cor-detalhes);
+height: 10px;
+transition: 5s;
+width: 1px;
+}
+
+h4 h3 h2 h1{
+ font-family: "Gloria Hallelujah", cursive;
+
+}
+
+
+/* portfolio // vendas // Catalogo */
+.portfolio .portfolio-item {
+    margin-bottom: 30px;
+}
+
+.portfolio #portfolio-filters {
+    margin: 0 auto 35px auto;
+    list-style: none;
+    text-align: center;
+    background: var(--fundo-claro);
+    border-radius: 5px;
+    padding: 2px 15px;
+}
+
+.portfolio #portfolio-filters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px 8px 15px;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+    color: var(--texto-menu);
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+}
+
+.portfolio #portfolio-filters li:hover,
+.portfolio #portfolio-filters li.filter-active {
+    color: var(--fundo-menu-lateral);
+}
+
+.portfolio .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
     position: absolute;
-    transition: width 1s ease-out; /* Animação da largura das barras */
-  }
-  
-  .area-texto {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* inset: 0;  resume valor=0 => TOP, RIGHT, Bottom, LEFT */
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+    opacity: 1;
+    right: 0;
+    bottom: -60px;
+    left: 0;
+    z-index: 3;
     position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  .porcentagem {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-    font-weight: bold;
-  }
-  
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+    color: var(--texto-escuro);
+    font-size: 28px;
+    text-align: center;
+    background: var(--fundo-claro);
+    transition: 0.3s;
+    width: 50%;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+    background: var(--fundo-escuro);
+    color: var(--detalhes-icones);
+}
+
+.portfolio .portfolio-wrap .portfolio-links a+a {
+    border-left: 2px solid var(--fundo-menu-lateral);
+}
+
+.portfolio .portfolio-wrap:hover::before {
+    inset: 0;
+    opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-links {
+    opacity: 1;
+    bottom: 0;
+}
